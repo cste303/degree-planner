@@ -10,7 +10,7 @@ export const metadata = {
   description: "UoA Degree Planner",
 };
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default function RootLayout({
   children,

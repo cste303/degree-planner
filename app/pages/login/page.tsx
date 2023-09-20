@@ -1,14 +1,15 @@
-'use client'
+"use client";
 
+import GoogleSigninBUtton from "@/components/GoogleSigninButton";
 import Messages from "./messages";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function Login() {
   const [showSignIn, setShowSignIn] = useState(true);
 
   const handleForm = () => {
     setShowSignIn(!showSignIn);
-  }
+  };
 
   return (
     <div className="flex justify-center items-center">
@@ -50,16 +51,12 @@ export default function Login() {
             <div className="flex-1 flex flex-col w-full items-center gap-2 text-foreground">
               <p>or</p>
             </div>
-            <div className="flex-1 flex flex-col w-full items-center gap-2 text-foreground">
-              {/* Obtained from https://tailwindflex.com/shakti/google-login-signup-button */}
-              <button className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-                <img className="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo" />
-                <span>Login with Google</span>
-              </button>
-            </div>
+            <GoogleSigninBUtton />
             <div className="flex-1 flex flex-row w-full justify-center items-center gap-2 text-foreground">
               <span>Don't have an account?</span>
-              <button onClick={handleForm}><u>Sign Up</u></button>
+              <button onClick={handleForm}>
+                <u>Sign Up</u>
+              </button>
             </div>
           </>
         ) : (
@@ -102,9 +99,7 @@ export default function Login() {
                 placeholder="••••••••"
                 required
               />
-              <button
-                className="bg-green-700 rounded px-4 py-2 text-white mb-2"
-              >
+              <button className="bg-green-700 rounded px-4 py-2 text-white mb-2">
                 Sign Up
               </button>
               <Messages />
@@ -112,16 +107,12 @@ export default function Login() {
             <div className="flex-1 flex flex-col w-full items-center gap-2 text-foreground">
               <p>or</p>
             </div>
-            <div className="flex-1 flex flex-col w-full items-center gap-2 text-foreground">
-              {/* Obtained from https://tailwindflex.com/shakti/google-login-signup-button */}
-              <button className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-                <img className="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo" />
-                <span>Login with Google</span>
-              </button>
-            </div>
+            <GoogleSigninBUtton />
             <div className="flex-1 flex flex-row w-full justify-center items-center gap-2 text-foreground">
               <span>Already a user?</span>
-              <button onClick={handleForm}><u>Sign In</u></button>
+              <button onClick={handleForm}>
+                <u>Sign In</u>
+              </button>
             </div>
           </>
         )}
